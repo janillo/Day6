@@ -1,0 +1,141 @@
+<mat-accordion *ngIf="user">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                User data
+            </mat-panel-title>
+            <mat-panel-description>
+                Data of the User
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout='column'>
+            <mat-form-field>
+                <input matInput
+                       placeholder="Id"
+                       readonly
+                       value=" {{user.id}}">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="Name"
+                       readonly
+                       value=" {{user.name}}">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput
+                       placeholder="Username"
+                       readonly
+                       value=" {{user.username}}">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="Email"
+                       readonly
+                       value=" {{user.email}}">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="Phone"
+                       readonly
+                       value=" {{user.phone}}">
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="Website"
+                       readonly
+                       value=" {{user.website}}">
+            </mat-form-field>
+
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                User address
+            </mat-panel-title>
+            <mat-panel-description>
+                Address
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout='column'>
+            <mat-form-field>
+                <input matInput
+                       placeholder="Street"
+                       readonly
+                       value=" {{user.address.street}}">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="Suite"
+                       readonly
+                       value=" {{user.address.suite}}">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput
+                       placeholder="City"
+                       readonly
+                       value=" {{user.address.city}}">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="Zipcode"
+                       readonly
+                       value=" {{user.address.zipcode}}">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput
+                       placeholder="Longitud"
+                       readonly
+                       value=" {{user.address.geo.lng}}">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="Latitud"
+                       readonly
+                       value=" {{user.address.geo.lat}}">
+            </mat-form-field>
+
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                User company
+            </mat-panel-title>
+            <mat-panel-description>
+                Company
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout='column'>
+            <mat-form-field>
+                <input matInput
+                       placeholder="Name"
+                       readonly
+                       value=" {{user.company.name}}">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                       placeholder="CatchPhrase"
+                       readonly
+                       value=" {{user.company.catchPhrase}}">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput
+                       placeholder="Bs"
+                       readonly
+                       value=" {{user.company.bs}}">
+            </mat-form-field>
+
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
